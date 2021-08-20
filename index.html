@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cash Register App</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <section class="nav-section">
+    <nav></nav>
+  </section>
+  <section class="app">
+    <section class="banner-section">
+      <h1>Cashter</h1>
+    </section>
+    <section class="main-app-sec">
+      <div class="notes-available-count">
+        <table class="presCashTable">
+          <tr class="denominationRow">
+            <th class="denomination">₹.2000</th>
+            <th class="denomination">₹.500</th>
+            <th class="denomination">₹.200</th>
+            <th class="denomination">₹.100</th>
+            <th class="denomination">₹.50</th>
+            <th class="denomination">₹.20</th>
+            <th class="denomination">₹.10</th>
+            <th class="denomination">₹.5</th>
+            <th class="denomination">₹.2</th>
+            <th class="denomination">₹.1</th>
+          </tr>
+          <tr id="presCash">
+            <th class="presCashUnits" id="pres2000">20</th>
+            <th class="presCashUnits" id="pres500">20</th>
+            <th class="presCashUnits" id="pres200">20</th>
+            <th class="presCashUnits" id="pres100">20</th>
+            <th class="presCashUnits" id="pres50">20</th>
+            <th class="presCashUnits" id="pres20">20</th>
+            <th class="presCashUnits" id="pres10">20</th>
+            <th class="presCashUnits" id="pres5">20</th>
+            <th class="presCashUnits" id="pres2">20</th>
+            <th class="presCashUnits" id="pres1">20</th>
+          </tr>
+        </table>
+      </div>
+      <form class="difference-counter">
+        <label class="bill-amount-lbl">
+          Bill Amount: ₹.
+          <input class="bill-amount" id="bill_amount" type="number">
+        </label>
+        <label class="paid-amount-lbl">
+          Paid Amount: ₹.
+          <input class="paid-amount" id="paid_amount" type="number">
+        </label>
+      </form>
+      <button class="calculate" type="submit">Calculate</button>
+      <button class="calculate" type="reset">New Customer</button>
+      <div class="notes-returned-count">
+        <table class="returnedCashTable">
+          <tr id="returnedCash">
+            <th class="returnedCashUnits" id="returned2000">0</th>
+            <th class="returnedCashUnits" id="returned500">0</th>
+            <th class="returnedCashUnits" id="returned200">0</th>
+            <th class="returnedCashUnits" id="returned100">0</th>
+            <th class="returnedCashUnits" id="returned50">0</th>
+            <th class="returnedCashUnits" id="returned20">0</th>
+            <th class="returnedCashUnits" id="returned10">0</th>
+            <th class="returnedCashUnits" id="returned5">0</th>
+            <th class="returnedCashUnits" id="returned2">0</th>
+            <th class="returnedCashUnits" id="returned1">0</th>
+          </tr>
+          <tr class="denominationRow">
+            <th class="denomination">₹.2000</th>
+            <th class="denomination">₹.500</th>
+            <th class="denomination">₹.200</th>
+            <th class="denomination">₹.100</th>
+            <th class="denomination">₹.50</th>
+            <th class="denomination">₹.20</th>
+            <th class="denomination">₹.10</th>
+            <th class="denomination">₹.5</th>
+            <th class="denomination">₹.2</th>
+            <th class="denomination">₹.1</th>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <section>
+      <p>Please refer the console for a better perspective of the core mechanics of the code</p>
+    </section>
+  </section>
+</body>
+<script src="js/index.js"></script>
+</html>

@@ -1,0 +1,5 @@
+td {
+  display: flex;
+  flex-flow: column;
+  margin: 30px;
+}
