@@ -1,5 +1,49 @@
-td {
-  display: flex;
-  flex-flow: column;
-  margin: 30px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+button {
+  padding: 11px 21px;
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.11);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+input[type='button'] {
+  padding: 11px 21px;
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.11);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+body {
+  background-color: rgba(0, 153, 255, 0.418);
+  width: 100vw;
+  height: 100vh;
+}
+.app {
+  width: 525px;
+  height: 768px;
+  margin: auto;
+  padding: 71px 31px;
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.11);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.app .banner-section {
+  background-color: rgba(112, 212, 212, 0.333);
+  color: #fff;
+  border: 3px solid rgba(255, 255, 255, 0.17);
+  border-radius: 7px;
+  padding: 11px 21px;
+  font-size: 21px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.237);
 }

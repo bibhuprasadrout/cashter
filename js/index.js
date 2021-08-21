@@ -94,7 +94,7 @@ let noteUnitRequired;
 let eligibleNoteValues;
 
 function valueReturned(returnValue) {
-  if (bill.value > 0 && paid.value > bill.value) {
+  if (Number(bill.value) > 0 && Number(paid.value) > Number(bill.value)) {
     returnValue = paid.value - bill.value;
   }
   return returnValue;
