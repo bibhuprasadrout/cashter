@@ -93,6 +93,8 @@ let returnValue = 0;
 let noteUnitRequired;
 let eligibleNoteValues;
 
+console.log('This application can be improved a lot more, but at this stage neoG does not require that level of scrutiny.')
+
 function valueReturned(returnValue) {
   if (Number(bill.value) > 0 && Number(paid.value) > Number(bill.value)) {
     returnValue = paid.value - bill.value;

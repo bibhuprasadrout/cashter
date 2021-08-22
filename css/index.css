@@ -1,49 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;700&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  color: #fff
 }
 button {
-  padding: 11px 21px;
+  padding: 7px 17px;
   border: 1px solid rgba(255, 255, 255, 0.17);
-  border-radius: 7px;
+  border-radius: 3px;
   background: rgba(255, 255, 255, 0.11);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(27px);
+  font-weight: 700;
+  font-size: 11px;
 }
 input[type='button'] {
-  padding: 11px 21px;
+  padding: 7px 17px;
   border: 1px solid rgba(255, 255, 255, 0.17);
-  border-radius: 7px;
+  border-radius: 3px;
   background: rgba(255, 255, 255, 0.11);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(27px);
+  font-weight: 700;
+  font-size: 11px;
 }
 body {
   background-color: rgba(0, 153, 255, 0.418);
+  background-image: url('../media/images/nathan-mullet-pjqAbLokM_E-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   width: 100vw;
   height: 100vh;
 }
 .app {
-  width: 525px;
-  height: 768px;
-  margin: auto;
-  padding: 71px 31px;
+  width: auto;
+  max-width: 700px;
+  height: 527px;
+  margin: 30px auto;
   border: 1px solid rgba(255, 255, 255, 0.17);
   border-radius: 7px;
   background: rgba(255, 255, 255, 0.11);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3vh;
 }
+
 .app .banner-section {
   background-color: rgba(112, 212, 212, 0.333);
-  color: #fff;
   border: 3px solid rgba(255, 255, 255, 0.17);
   border-radius: 7px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   padding: 11px 21px;
   font-size: 21px;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.237);
+  box-shadow: 0 8px 32px 0 rgba(31, 135, 83, 0.237);
+  width: 100%;
+}
+
+.app .main-app-sec {  
+  padding: 3vw;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3vh;
+}
+
+/* Table One */
+.app .main-app-sec .notes-available-count .presCashTable {
+  border-spacing: 3px 0;
+}
+
+.app .main-app-sec .notes-available-count .presCashTable tbody .denominationRow .denomination {
+  border: 3px solid rgba(112, 212, 212, 0.333);
+  padding: 3px 7px;
+  font-weight: 700;
+  font-size: 17px;
+  background-color: #00000077;
+}
+
+.app .main-app-sec .notes-available-count .presCashTable tbody .denominationRow .denomination:first-child {
+  border-top-left-radius: 7px; 
+}
+
+.app .main-app-sec .notes-available-count .presCashTable tbody .denominationRow .denomination:last-child {
+  border-top-right-radius: 7px; 
+}
+
+.app .main-app-sec .notes-available-count .presCashTable tbody #presCash .presCashUnits {    
+  border: 3px solid rgba(112, 212, 212, 0.333);
+  border-top: none;
+  padding: 3px 7px;
+  text-align: center;
+  font-size: 17px;
+  background-color: #00000077;
+}
+
+/* User Intraction Part */
+.app .main-app-sec .difference-counter {    
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 11px;
+}
+
+.app .main-app-sec .difference-counter label input {    
+  outline: none;
+  border-radius: 3px;
+  border: 3px solid #fff;
+  background-color: #00000037;
+
+}
+
+.app .main-app-sec .difference-counter .execute {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 21px;
+}
+
+/* Table Two */
+.app .main-app-sec .notes-returned-count .returnedCashTable {
+  border-spacing: 3px 0;
+}
+
+.app .main-app-sec .notes-returned-count .returnedCashTable tbody .denominationRow .denomination {
+  border: 3px solid rgba(112, 212, 212, 0.333);
+  padding: 3px 7px;
+  font-weight: 700;
+  font-size: 17px;
+  background-color: #00000077;
+}
+
+.app .main-app-sec .notes-returned-count .returnedCashTable tbody #returnedCash .returnedCashUnits {    
+  border: 3px solid rgba(112, 212, 212, 0.333);
+  border-bottom: none;
+  padding: 3px 7px;
+  text-align: center;
+  font-size: 17px;
+  background-color: #00000077;
+}
+
+.app .main-app-sec .notes-returned-count .returnedCashTable tbody .denominationRow .denomination:first-child {
+  border-bottom-left-radius: 7px; 
+}
+
+.app .main-app-sec .notes-returned-count .returnedCashTable tbody .denominationRow .denomination:last-child {
+  border-bottom-right-radius: 7px; 
+}
+
+.app .disclaimer { 
+  padding: 3vw;
 }
