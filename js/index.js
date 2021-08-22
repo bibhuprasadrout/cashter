@@ -93,7 +93,11 @@ let returnValue = 0;
 let noteUnitRequired;
 let eligibleNoteValues;
 
-console.log('This application can be improved a lot more, but at this stage neoG does not require that level of scrutiny.')
+console.log(`This application can be improved a lot more, but at this stage neoG does not require that level of scrutiny.
+
+The application works like a real cashier where there are finite numbers of cash available and transaction can not go beyond that limit, In this app the count displayed in the first table are the available cash beyond that negative numbers shall appear.
+
+As mentioned above the requirement does not call for such standards at the moment.`)
 
 function valueReturned(returnValue) {
   if (Number(bill.value) > 0 && Number(paid.value) > Number(bill.value)) {
@@ -174,4 +178,11 @@ function noteAvailCheck() {
   console.log(`Returned cash units: ${JSON.stringify(noteReturn)}`);
 }
 
-calculate.addEventListener("click", noteAvailCheck);
+calculate.addEventListener("click", function() {
+  if((bill.value) && (paid.value) && Number(paid.value) > Number(bill.value)) {
+    noteAvailCheck() 
+    document.querySelector('.disclaimer').innerText = 'Please refer the console for a better perspective of the core mechanics of the code.'
+  } else {
+    document.querySelector('.disclaimer').innerText = 'Please pay more than the generated bill amount.'
+  }
+});

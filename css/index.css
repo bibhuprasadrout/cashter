@@ -8,18 +8,9 @@
   font-weight: 500;
   color: #fff
 }
-button {
-  padding: 7px 17px;
-  border: 1px solid rgba(255, 255, 255, 0.17);
-  border-radius: 3px;
-  background: rgba(255, 255, 255, 0.11);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(27px);
-  font-weight: 700;
-  font-size: 11px;
-}
-input[type='button'] {
+
+input[type='button'],
+input[type='reset'] {
   padding: 7px 17px;
   border: 1px solid rgba(255, 255, 255, 0.17);
   border-radius: 3px;
@@ -42,7 +33,7 @@ body {
 .app {
   width: auto;
   max-width: 700px;
-  height: 527px;
+  height: 447px;
   margin: 30px auto;
   border: 1px solid rgba(255, 255, 255, 0.17);
   border-radius: 7px;
@@ -70,7 +61,7 @@ body {
 }
 
 .app .main-app-sec {  
-  padding: 3vw;
+  padding: 3vw 3vw 0 3vw;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -163,5 +154,5 @@ body {
 }
 
 .app .disclaimer { 
-  padding: 3vw;
+  padding: 0 3vw 3vh 3vw;
 }
