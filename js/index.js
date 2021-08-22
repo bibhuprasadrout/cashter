@@ -86,9 +86,10 @@ let noteReturn = [
 const bill = document.querySelector("#bill_amount");
 const paid = document.querySelector("#paid_amount");
 const returned = document.querySelector("#return_amount");
-const calculate = document.querySelector(".calculate");
 const PresCashUnits = document.querySelectorAll(".presCashUnits");
 const ReturnedCashUnits = document.querySelectorAll(".returnedCashUnits");
+const calculate = document.querySelector(".calculate");
+const reset = document.querySelector('input[type=reset]')
 let returnValue = 0;
 let noteUnitRequired;
 let eligibleNoteValues;
@@ -182,7 +183,13 @@ calculate.addEventListener("click", function() {
   if((bill.value) && (paid.value) && Number(paid.value) > Number(bill.value)) {
     noteAvailCheck() 
     document.querySelector('.disclaimer').innerText = 'Please refer the console for a better perspective of the core mechanics of the code.'
-  } else {
+  } else if((bill.value) && (paid.value) && Number(paid.value) < Number(bill.value)) {
     document.querySelector('.disclaimer').innerText = 'Please pay more than the generated bill amount.'
+  } else {
+    document.querySelector('.disclaimer').innerText = 'Please enter valid inputs.'
   }
 });
+
+reset.addEventListener('click', function() {
+  document.querySelector('.disclaimer').innerText = ''
+})
