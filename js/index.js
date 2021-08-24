@@ -1,3 +1,46 @@
+let maxUnit = [
+  {
+    noteVal: 2000,
+    max2000: 5
+  },
+  {
+    noteVal: 500,
+    max500: 10
+  },
+  {
+    noteVal: 200,
+    max200: 20
+  },
+  {
+    noteVal: 100,
+    max100: 20
+  },
+  {
+    noteVal: 50,
+    max50: 20
+  },
+  {
+    noteVal: 20,
+    max20: 20
+  },
+  {
+    noteVal: 10,
+    max10: 20
+  },
+  {
+    noteVal: 5,
+    max5: 20
+  },
+  {
+    noteVal: 2,
+    max2: 20
+  },
+  {
+    noteVal: 1,
+    max1: 20
+  }
+];
+
 let notePres = [
   {
     noteVal: 2000,
@@ -126,7 +169,7 @@ function noteRequiredCalculator(balanceAmount, note) {
 function updateTransaction(note) {
   console.log(`Note required for return : ${noteUnitRequired}`);
   notePres.forEach((noteObj) => {
-    if (noteObj[Object.keys(noteObj)[0]] === note[Object.keys(note)[0]]) {
+    if (noteObj[Object.keys(noteObj)[0]] === note[Object.keys(note)[0]] && noteObj[Object.keys(noteObj)[1]] > 0) {
       noteObj[Object.keys(noteObj)[1]] =
         Object.values(noteObj)[1] - noteUnitRequired;
       PresCashUnits.forEach((element) => {
@@ -136,8 +179,9 @@ function updateTransaction(note) {
       });
     }
   });
-  noteReturn.forEach((noteObj) => {
-    if (noteObj[Object.keys(noteObj)[0]] === note[Object.keys(note)[0]]) {
+  noteReturn.forEach((noteObj, index) => {
+    console.log(notePres[index][Object.keys(notePres[index])[1]])
+    if (noteObj[Object.keys(noteObj)[0]] === note[Object.keys(note)[0]] && noteObj[Object.keys(noteObj)[1]] < (maxUnit[index][Object.keys(maxUnit[index])[1]])) {
       noteObj[Object.keys(noteObj)[1]] =
         Object.values(noteObj)[1] + noteUnitRequired;
       ReturnedCashUnits.forEach((element) => {

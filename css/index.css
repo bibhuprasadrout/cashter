@@ -29,12 +29,13 @@ body {
   background-size: cover;
   width: 100vw;
   height: 100vh;
+  display: flex;
 }
 .app {
   width: auto;
   max-width: 700px;
   height: 507px;
-  margin: 30px auto;
+  margin: auto;
   border: 1px solid rgba(255, 255, 255, 0.17);
   border-radius: 7px;
   background: rgba(255, 255, 255, 0.11);
@@ -70,6 +71,16 @@ body {
 }
 
 /* Table One */
+.app .main-app-sec .notes-available-count::before {
+  content: 'Cash units available with the cashier.';
+  display: block;
+  font-size: 17px;
+  text-align: left;
+  width: 100%;
+  white-space: nowrap;
+  padding: 0 0 0 3px;
+}
+
 .app .main-app-sec .notes-available-count .presCashTable {
   border-spacing: 3px 0;
 }
@@ -124,6 +135,16 @@ body {
 }
 
 /* Table Two */
+.app .main-app-sec .notes-returned-count::after {
+  content: 'Cash units to be returned to the customer.';
+  display: block;
+  font-size: 17px;
+  text-align: left;
+  width: 100%;
+  white-space: nowrap;
+  padding: 0 0 0 3px;
+}
+
 .app .main-app-sec .notes-returned-count .returnedCashTable {
   border-spacing: 3px 0;
 }
