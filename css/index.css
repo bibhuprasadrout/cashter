@@ -62,7 +62,7 @@ body {
 }
 
 .app .main-app-sec {  
-  padding: 3vw 3vw 0 3vw;
+  padding: 0 3vw 0 3vw;
   display: flex;
   flex-flow: column;
   align-items: center;
